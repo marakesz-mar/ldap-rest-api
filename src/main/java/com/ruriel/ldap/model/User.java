@@ -53,7 +53,7 @@ public final class User implements Persistable<String> {
 	}
 
 	public void setMail(String mail) {
-		this.mail = mail;
+		this.givenName = mail;
 	}
 	public String getDn() {
 		if (dn == null)
