@@ -19,8 +19,8 @@ public class UserService {
 
 	public User create(User user) throws InvalidNameException {
 		if (user.getDn() == null)
-			user.setDn(LdapUtils.emptyLdapName().add("uid=" + user.getUid()));
-		User ret = findByUid(user.getUid());
+			user.setDn(LdapUtils.emptyLdapName().add("cn=" + user.getCn()));
+		User ret = findByUid(user.getCn());
 		if(ret == null)
 			return userRepository.save(user);
 		else
@@ -47,7 +47,7 @@ public class UserService {
 	public void delete(String uid) {
 		Name id;
 		try {
-			id = LdapUtils.emptyLdapName().add("uid=" + uid);
+			id = LdapUtils.emptyLdapName().add("cn=" + cn);
 		} catch (InvalidNameException e) {
 			id = null;
 			e.printStackTrace();
