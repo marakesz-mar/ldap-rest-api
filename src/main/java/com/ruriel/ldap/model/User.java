@@ -20,6 +20,8 @@ public final class User implements Persistable<String> {
 	private String cn;
 	@Attribute(name = "sn")
 	private String sn;
+	@Attribute(name = "givenName")
+	private String givenName;
 
 	public String getCn() {
 		return cn;
@@ -35,6 +37,14 @@ public final class User implements Persistable<String> {
 
 	public void setSn(String sn) {
 		this.sn = sn;
+	}
+	
+	public String getGivenName() {
+		return givenName;
+	}
+
+	public void setGivenName(String givenName) {
+		this.givenName = givenName;
 	}
 
 	public String getDn() {

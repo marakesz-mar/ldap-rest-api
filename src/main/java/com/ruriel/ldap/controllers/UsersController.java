@@ -46,13 +46,13 @@ public class UsersController {
 		ResponseDTO dto = new ResponseDTO();
 		List<User> users = service.findAll();
 		if (users == null || users.size() == 0) {
-			dto.setMessage("Nenhum usuárioo encontrado");
+			dto.setMessage("Nie znaleziono żadnego konta");
 		} else {
 			int size = users.size();
 			if (size == 1)
-				dto.setMessage("Foi encontrado 1 usuário.");
+				dto.setMessage("Znaleziono jedno konto.");
 			else
-				dto.setMessage("Foram encontrados " + users.size() + " usuários.");
+				dto.setMessage("Znaleziono " + users.size() + " kont.");
 			dto.setUsers(users);
 		}
 		return dto;
