@@ -22,8 +22,8 @@ public final class User implements Persistable<String> {
 	private String sn;
 	@Attribute(name = "givenName")
 	private String givenName;
-	@Attribute(name = "mail")
-	private String mail;
+	@Attribute(name = "userPassword")
+	private String userPassword;
 
 	public String getCn() {
 		return cn;
@@ -48,12 +48,12 @@ public final class User implements Persistable<String> {
 	public void setGivenName(String givenName) {
 		this.givenName = givenName;
 	}
-	public String getMail() {
-		return mail;
+	public String getUserPassword() {
+		return userPassword;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
 	public String getDn() {
 		if (dn == null)
