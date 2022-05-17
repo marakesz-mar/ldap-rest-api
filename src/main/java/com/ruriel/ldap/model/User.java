@@ -22,6 +22,8 @@ public final class User implements Persistable<String> {
 	private String sn;
 	@Attribute(name = "givenName")
 	private String givenName;
+	@Attribute(name = "mail")
+	private String mail;
 
 	public String getCn() {
 		return cn;
@@ -46,7 +48,13 @@ public final class User implements Persistable<String> {
 	public void setGivenName(String givenName) {
 		this.givenName = givenName;
 	}
+	public String getMail() {
+		return mail;
+	}
 
+	public void setMail(String mail) {
+		this.givenName = mail;
+	}
 	public String getDn() {
 		if (dn == null)
 			return null;
