@@ -19,7 +19,7 @@ public class UserService {
 
 	public User create(User user) throws InvalidNameException {
 		if (user.getDn() == null)
-			user.setDn(LdapUtils.emptyLdapName().add("uid=" + user.getUid()));
+			user.setDn(LdapUtils.emptyLdapName().add("cn=" + user.getUid()));
 		User ret = findByUid(user.getUid());
 		if(ret == null)
 			return userRepository.save(user);
@@ -29,7 +29,7 @@ public class UserService {
 
 	public User findByUid(String uid) {
 		try {
-			Optional<User> optional = userRepository.findById(LdapUtils.emptyLdapName().add("uid=" + uid));
+			Optional<User> optional = userRepository.findById(LdapUtils.emptyLdapName().add("cn=" + uid));
 			return optional.get();
 		} catch (InvalidNameException e) {
 			e.printStackTrace();
