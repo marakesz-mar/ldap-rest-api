@@ -47,7 +47,7 @@ public class UserService {
 	public void delete(String uid) {
 		Name id;
 		try {
-			id = LdapUtils.emptyLdapName().add("cn=" + uid);
+			id = LdapUtils.emptyLdapName().add("cn=" + cn);
 		} catch (InvalidNameException e) {
 			id = null;
 			e.printStackTrace();
