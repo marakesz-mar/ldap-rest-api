@@ -33,9 +33,9 @@ public class UsersController {
 		}
 		ResponseDTO dto = new ResponseDTO();
 		if (ret == null)
-			dto.setMessage("Não foi possível persistir o usuário.");
+			dto.setMessage("Nie udało się stworzyć konta użytkownika.");
 		else {
-			dto.setMessage("Usuário persistido com sucesso.");
+			dto.setMessage("SUKCES - jebać PIS.");
 			dto.addUser(ret);
 		}
 		return dto;
@@ -63,9 +63,9 @@ public class UsersController {
 		ResponseDTO dto = new ResponseDTO();
 		User user = service.findByUid(uid);
 		if (user == null) {
-			dto.setMessage("Nenhum usuário encontrado.");
+			dto.setMessage("Brak konta.");
 		} else {
-			dto.setMessage("Usuário encontrado com sucesso.");
+			dto.setMessage("Istnieje takie konto.");
 			dto.addUser(user);
 		}
 		return dto;
@@ -76,10 +76,10 @@ public class UsersController {
 		ResponseDTO dto = new ResponseDTO();
 		User user = service.findByUid(uid);
 		if (user == null)
-			dto.setMessage("Nenhum usuário encontrado.");
+			dto.setMessage("User nie usuniety.");
 		else {
 			service.delete(uid);
-			dto.setMessage("Usuário removido.");
+			dto.setMessage("Do piekła!.");
 		}
 		return dto;
 	}
