@@ -9,7 +9,7 @@
 		<version>2.2.2.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ruriel</groupId>
+	<groupId>com.exineo</groupId>
 	<artifactId>ldap-rest-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ldap-rest-api</name>

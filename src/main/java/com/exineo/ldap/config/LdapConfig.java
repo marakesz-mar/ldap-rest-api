@@ -13,7 +13,7 @@ import org.springframework.ldap.odm.core.impl.DefaultObjectDirectoryMapper;
 
 
 @Configuration
-@EnableLdapRepositories("com.ruriel.ldap.**")
+@EnableLdapRepositories("com.exineo.ldap.**")
 public class LdapConfig {
 
 	@Autowired
